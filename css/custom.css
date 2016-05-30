@@ -1,0 +1,35 @@
+.splash {
+  height: 20em;
+  padding-top: 5em;
+  margin-bottom: 2em;
+  background-image: url("http://mousedesigned.com/img/carouselNarrow05.jpg");
+  background-size: cover;
+  text-align: center;
+}
+.splash-text {
+  color: whitesmoke;
+  font-size: 8vw;
+  font-family: 'Raleway', sans-serif;
+}
+.splash-icon {
+  color: whitesmoke;
+  font-size: 8vw;
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-color: lightgray;
+}
+.form-font {
+  font-family: 'Open Sans', sans-serif;
+}
+.form-lg {
+  font-size: 25px;
+}
+.form-huge {
+  font-size: 35px;
+}
