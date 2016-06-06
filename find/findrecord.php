@@ -52,9 +52,8 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["contacts_id"]. "<br>";
-        echo "Phone Number: " . $row["number"]. "<br>";
-        echo "Location: " . $row["loc"]. "<br><hr>";
+        echo "<h1 class="primary">" . $row["number"]. "</h1><br>";
+        echo "<h2 class="primary">" . $row["loc"]. "</h2><br><hr>";
     }
 } else {
     echo "Sorry there are no matches! Please check your entry and try again.";
@@ -65,11 +64,17 @@ mysqli_close($conn);
 ?>
 
 </div>
-        <div class="row">
+            <div class="row">
             <div class="col-lg-2">
-                <a href="index.html"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a>
+                    <a href="index.html"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a>
             </div>
-        </div>
+            <div class="col-lg-2">
+                    <a href="../index.html"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-lg-2">
+                    <a href="../display/displaylist.php"><i class= "fa fa-list-alt fa-3x" aria-hidden="true"></i></a>
+            </div>
+            </div>
     </div>
 </div>
 </body>
