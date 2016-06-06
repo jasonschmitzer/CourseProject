@@ -33,3 +33,10 @@ body {
 .form-huge {
   font-size: 35px;
 }
+span {
+  font-size: x-large;
+  font-family: 'Open Sans', sans-serif;
+}
+.foot-icons {
+  padding: 20px;
+}

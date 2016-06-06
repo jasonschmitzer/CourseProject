@@ -49,8 +49,8 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo "id: " . $row["contacts_id"]. "<br>";
-        echo "Phone Number: " . $row["number"]. "<br>";
-        echo "Location: " . $row["loc"]. "<br><hr>";
+        echo "<span>" . $row["number"]. "</span><br>";
+        echo "<span>" . $row["loc"]. "</span><br><hr>";
     }
 } else {
     echo "0 results";
@@ -60,10 +60,9 @@ mysqli_close($conn);
 
 ?>
 </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <a href="../index.html"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a>
-            </div>
+        <div class="row text-center">
+                <a href="../index.html"><i class="fa fa-home fa-3x foot-icons" aria-hidden="true"></i></a>
+                <a href="../display/displaylist.php"><i class= "fa fa-list-alt fa-3x foot-icons" aria-hidden="true"></i></a>
         </div>
     </div>
 </div>

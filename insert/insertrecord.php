@@ -17,42 +17,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
+    
 </head>
 
 <body>
-    <div class="splash">
-        <div class="container" data-example-id="hoverable-table">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="splash-text">Number Added <i class="fa fa-inbox splash-icon" aria-hidden="true"></i></h1>
-                </div>
-            </div>
-            <div class="jumbotron">
-                <?php
+<div class="splash">
+<div class="container" data-example-id="hoverable-table">
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <h1 class="splash-text">Number Added <i class="fa fa-inbox splash-icon" aria-hidden="true"></i></h1>
+    </div>
+</div>
+        <div class="jumbotron">
+          <?php
 
                 // Connect to MySQL
  				$mysqli = new mysqli( 'us-cdbr-azure-central-a.cloudapp.net', 'ba02f0e0d37b6a','a7285add', 'privatecontacts' );
 
 
-
                $number = (isset($_POST['number'])    ? $_POST['number']   : '');
                $loc = (isset($_POST['loc'])    ? $_POST['loc']   : '');
-            
-                //validation for number and location
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (empty($_POST["number"])) {
-                $nameErr = "Number is required";
-                } else {
-                $name = test_input($_POST["number"]);
-                }
-
-                if (empty($_POST["loc"])) {
-                $emailErr = "Location is required";
-                } else {
-                $email = test_input($_POST["loc"]);
-                }
-                }
 
 
 			  // Insert our data
@@ -71,19 +55,12 @@
 
             ?>
             </div>
-            <div class="row">
-            <div class="col-lg-2">
-                    <a href="index.html"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a>
-            </div>
-            <div class="col-lg-2">
-                    <a href="../index.html"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a>
-            </div>
-            <div class="col-lg-2">
-                    <a href="../display/displaylist.php"><i class= "fa fa-list-alt fa-3x" aria-hidden="true"></i></a>
-            </div>
-            </div>
+        <div class="row text-center">
+                <a href="index.html"><i class="fa fa-arrow-circle-left fa-3x foot-icons" aria-hidden="true"></i></a>
+                <a href="../display/displaylist.php"><i class= "fa fa-list-alt fa-3x foot-icons" aria-hidden="true"></i></a>
         </div>
     </div>
+</div>
 </body>
 <!-- Latest compiled and minified JQuery -->
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -91,4 +68,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+<!-- JS Validator -->
+<script src="validator.js"></script>
 </html>
